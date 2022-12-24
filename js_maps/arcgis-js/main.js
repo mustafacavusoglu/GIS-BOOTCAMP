@@ -65,7 +65,6 @@ require(['esri/Map', 'esri/views/MapView', 'esri/layers/GeoJSONLayer'], (Map, Ma
                     return result.graphic.layer === geoJsonLayer;
                 })[0].graphic;
                 
-                console.log(graphic.attributes);
                 console.log(graphic.attributes.name);
             }
         })
