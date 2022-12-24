@@ -1,0 +1,13 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+section{
+    width: 50%;
+    border: 2px black solid;
+    height: 50rem;
+    overflow-y: scroll;
+    box-sizing: border-box;
+}
