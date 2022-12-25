@@ -9,6 +9,7 @@
 
     <script src="main.js" defer></script>
     <title>Document</title>
+    
     <script src="https://cesium.com/downloads/cesiumjs/releases/1.100/Build/Cesium/Cesium.js"></script>
     <link href="https://cesium.com/downloads/cesiumjs/releases/1.100/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
 </head>
@@ -38,11 +39,26 @@
             <li class="item" id="mn3">
                 <a class="btn" href="#mn3">Modeller</a>
                 <div class="submenu">
-                    <a href="#">Lod1</a>
+                    <a href="#" id="lod1">Lod1</a>
+                    <a href="#" id="osm">OSM</a>
                     <a href="#">BIM</a>
                     <a href="#">Mesh</a>
                 </div>
             </li>
+        </div>
+    
+    </div>
+
+    <div id="style">
+        <div class="colorTypeContainer">
+            <label for="style">Tek renk</label>
+            <input type="radio" name="style" id="singleColor" value="1" onchange=getRadioType();>
+    
+            <label for="style">Çoklu Renk</label>
+            <input type="radio" name="style" id="multiColor" value="2" onchange=getRadioType();>
+        </div>
+        <div id="styleBodyContainer">
+    
         </div>
     
     </div>
