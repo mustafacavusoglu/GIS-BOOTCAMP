@@ -170,3 +170,20 @@ const multiColorSubmit = () => {
         },
       });
 }
+
+
+let handler = new Cesium.ScreenSpaceEventHandler(viewer.scene.canvas);
+
+handler.setInputAction(function(click) {
+    let pickedObject = viewer.scene.pick(click.position);
+
+
+    if(Cesium.defined(pickedObject) && (pickedObject instanceof Cesium.Cesium3DTileFeature)) {
+        console.log('tıklandı');
+    
+        let isyeri = pickedObject.getProperty('ISYERI_SAY');
+        alert(isyeri)
+
+    }
+
+}, Cesium.ScreenSpaceEventType.LEFT_CLICK);
